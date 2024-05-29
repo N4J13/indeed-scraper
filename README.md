@@ -31,7 +31,6 @@ A Node.js script that scrapes Indeed for new job postings in specified roles and
     ```
     EMAIL_USER=your-gmail-address@gmail.com
     EMAIL_PASS=your-gmail-app-password
-    EMAIL_FROM=your-gmail-address@gmail.com
     EMAIL_TO=recipient-email-address@example.com
     ```
     **Note:** For `EMAIL_PASS`, generate an App Password from your Google Account settings. [Instructions for generating an App Password](https://support.google.com/mail/answer/185833?hl=en).
