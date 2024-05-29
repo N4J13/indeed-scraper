@@ -1,6 +1,8 @@
 const puppeteer = require("puppeteer");
 const cron = require("node-cron");
 const sendEmail = require("./mail/mail");
+const { config } = require("dotenv");
+const { desiredRole } = require("./config/config");
 
 const scrape = async () => {
   const browser = await puppeteer.launch({
@@ -10,8 +12,8 @@ const scrape = async () => {
 
   await page.goto("https://in.indeed.com/", { waitUntil: "networkidle2" });
   //  Get the job title and location
-  await page.type("#text-input-what", "React Developer");
-  await page.type("#text-input-where", "Banglore");
+  await page.type("#text-input-what", config.desiredRole);
+  await page.type("#text-input-where", config.location);
   await page.click('button[type="submit"]');
 
   await page.waitForNavigation();

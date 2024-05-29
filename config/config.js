@@ -6,4 +6,6 @@ module.exports = {
     pass: process.env.EMAIL_PASS || "",
     to: process.env.EMAIL_TO || "",
   },
+  desiredRole: "React Developer",
+  location: "Banglore",
 };
