@@ -32,7 +32,7 @@ const sendEmail = async (newJobListings) => {
     .join("<hr>");
 
   const mailOptions = {
-    from: config.email.user,
+    from: config.email.from,
     to: config.email.to,
     subject: "New Job Postings - React Developer",
     html: `${jobListingsHTML}`,
